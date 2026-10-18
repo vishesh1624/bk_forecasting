@@ -1,0 +1,20 @@
+actuals_till: "2026-09-30"
+forecast_start: "2026-10-31"
+forecast_end: "2027-09-30"
+
+model:
+  test_size: 0.25
+  random_state: 42
+  bankruptcy_probability_threshold: 0.50
+
+forecast_assumptions:
+  monthly_ar_growth_rate: 0.002
+  monthly_dq_ratio_deterioration: 0.003
+  max_dq_ratio: 0.95
+
+paths:
+  ar_csv: "input/ar_actuals.csv"
+  ratios_csv: "input/customer_ratios.csv"
+  labels_csv: "input/historical_bankruptcy_labels.csv"
+  sqlite_db: "database/bank.db"
+  output_folder: "output"
